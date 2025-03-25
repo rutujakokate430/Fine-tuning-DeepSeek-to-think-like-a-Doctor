@@ -23,7 +23,7 @@ Mathematically, instead of updating the full weight matrix \(W\), we optimize:
 \[ W + \Delta W, \quad \text{where} \quad \Delta W = A \times B \]
 where \(A, B\) are low-rank matrices.
 
-<img width="481" alt="image" src="https://github.com/user-attachments/assets/797a4d39-81f0-4006-bb66-2b0e3b31e309" />
+<img width="903" alt="image" src="https://github.com/user-attachments/assets/797a4d39-81f0-4006-bb66-2b0e3b31e309" />
 
 ---
 
@@ -100,7 +100,7 @@ Since `max_steps=60`, we allow for additional training beyond one epoch.
 | **Gradient Checkpointing** | ✅        | Saves VRAM during backpropagation. |
 
 ---
-<img width="385" alt="image" src="https://github.com/user-attachments/assets/7da9856d-43af-45ef-9bac-4f87096ab99e" />
+<img width="903" alt="image" src="https://github.com/user-attachments/assets/7da9856d-43af-45ef-9bac-4f87096ab99e" />
 
 ## Challenges Faced
 
@@ -109,7 +109,7 @@ Since `max_steps=60`, we allow for additional training beyond one epoch.
 - **Gradient Exploding:** Initial training showed unstable gradients, requiring `gradient_accumulation_steps=4` to stabilize updates.
 
 ## Training Curves
-<img width="516" alt="image" src="https://github.com/user-attachments/assets/ccac3d48-2e95-4d34-b782-0c9289865a5a" />
+<img width="903" alt="image" src="https://github.com/user-attachments/assets/ccac3d48-2e95-4d34-b782-0c9289865a5a" />
 
 ## Results Examples: 
 - ** Fine tuned model responses to medical questions.
