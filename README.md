@@ -5,6 +5,8 @@
 This project fine-tunes the **DeepSeek-R1-Distill-Llama-8B** model using **LoRA (Low-Rank Adaptation)** technique to efficiently adapt a large-scale LLM with reduced memory and compute requirements.
 
 We leverage **Unsloth’s FastLanguageModel** to optimize the loading and training of the model while using **4-bit quantization** to minimize VRAM consumption. The fine-tuning process is tracked and visualized using **Weights & Biases (W&B)**.
+<img width="445" alt="image" src="https://github.com/user-attachments/assets/1bd80413-9e5a-49ad-911b-82e5924fc3d1" />
+
 
 ## Why LoRA?
 
@@ -107,6 +109,14 @@ Since `max_steps=60`, we allow for additional training beyond one epoch.
 
 ## Training Curves
 <img width="516" alt="image" src="https://github.com/user-attachments/assets/ccac3d48-2e95-4d34-b782-0c9289865a5a" />
+
+## Results Examples: 
+- ** Fine tuned model responses to medical questions.
+- <img width="869" alt="image" src="https://github.com/user-attachments/assets/a9ef8bc2-6a11-4683-b36b-121dc652e29f" />
+- <img width="862" alt="image" src="https://github.com/user-attachments/assets/513dcc03-bfa7-467d-8b31-5486286afe25" />
+
+
+
 
 
 
