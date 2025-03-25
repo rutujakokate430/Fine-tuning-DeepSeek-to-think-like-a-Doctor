@@ -6,7 +6,7 @@ This project fine-tunes the **DeepSeek-R1-Distill-Llama-8B** model using **LoRA 
 
 We leverage **Unsloth’s FastLanguageModel** to optimize the loading and training of the model while using **4-bit quantization** to minimize VRAM consumption. The fine-tuning process is tracked and visualized using **Weights & Biases (W&B)**.
 
-## Why LoRA and QLoRA?
+## Why LoRA?
 
 ### LoRA (Low-Rank Adaptation)
 
@@ -20,14 +20,7 @@ Mathematically, instead of updating the full weight matrix \(W\), we optimize:
 \[ W + \Delta W, \quad \text{where} \quad \Delta W = A \times B \]
 where \(A, B\) are low-rank matrices.
 
-### QLoRA (Quantized LoRA)
-
-QLoRA further reduces memory usage by:
-
-- **Quantizing the base model to 4-bit** precision.
-- **Applying LoRA adapters on top of the quantized model**.
-
-This allows fine-tuning of **8B+ models on consumer GPUs** (e.g., **RTX 3090/4090**) without exceeding VRAM limits.
+<img width="481" alt="image" src="https://github.com/user-attachments/assets/797a4d39-81f0-4006-bb66-2b0e3b31e309" />
 
 ---
 
@@ -46,6 +39,18 @@ This allows fine-tuning of **8B+ models on consumer GPUs** (e.g., **RTX 3090/409
 - **Structure:** Includes questions, chain-of-thought reasoning, and responses
 
 ---
+## Tech Stack
+
+| Component              | Technology Used                                  | Purpose                                        |
+|----------------------|------------------------------------------------|------------------------------------------------|
+| **Model**            | DeepSeek-R1-Distill-Llama-8B                   | Base large language model for fine-tuning     |
+| **Fine-Tuning**      | LoRA, QLoRA                                    | Efficient model adaptation with fewer parameters |
+| **Framework**        | PyTorch, Transformers (Hugging Face)           | Deep learning framework for model training    |
+| **Model Optimization** | FastLanguageModel (Unsloth)                    | Optimized model loading and execution        |
+| **Data Processing**   | Hugging Face Datasets, Pandas                  | Handling and preprocessing training data     |
+| **Training Logging**  | Weights & Biases (W&B)                         | Tracking training metrics and performance     |
+| **Quantization**      | 4-bit Quantization, Bitsandbytes                | Reducing VRAM usage while maintaining performance |
+| **Hardware**         | NVIDIA RTX 3090/4090, A100 GPUs                 | Compute resources for fine-tuning             |
 
 ## Fine-Tuning Configuration
 
@@ -92,6 +97,7 @@ Since `max_steps=60`, we allow for additional training beyond one epoch.
 | **Gradient Checkpointing** | ✅        | Saves VRAM during backpropagation. |
 
 ---
+<img width="385" alt="image" src="https://github.com/user-attachments/assets/7da9856d-43af-45ef-9bac-4f87096ab99e" />
 
 ## Challenges Faced
 
