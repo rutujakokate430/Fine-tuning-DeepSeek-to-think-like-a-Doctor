@@ -1,4 +1,4 @@
-# Fine-Tuning DeepSeek-R1-Distill-Llama-8B with LoRA to think like a Doctor
+# Fine-Tuning DeepSeek with LoRA to think like a Doctor
 
 ## Overview
 
