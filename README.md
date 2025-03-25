@@ -1,8 +1,8 @@
-# Fine-Tuning DeepSeek-R1-Distill-Llama-8B with LoRA and QLoRA
+# Fine-Tuning DeepSeek-R1-Distill-Llama-8B with LoRA
 
 ## Overview
 
-This project fine-tunes the **DeepSeek-R1-Distill-Llama-8B** model using **LoRA (Low-Rank Adaptation)** and **QLoRA (Quantized LoRA)** techniques to efficiently adapt a large-scale LLM with reduced memory and compute requirements.
+This project fine-tunes the **DeepSeek-R1-Distill-Llama-8B** model using **LoRA (Low-Rank Adaptation)** technique to efficiently adapt a large-scale LLM with reduced memory and compute requirements.
 
 We leverage **Unsloth’s FastLanguageModel** to optimize the loading and training of the model while using **4-bit quantization** to minimize VRAM consumption. The fine-tuning process is tracked and visualized using **Weights & Biases (W&B)**.
 
