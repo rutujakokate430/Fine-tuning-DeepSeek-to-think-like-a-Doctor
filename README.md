@@ -1,4 +1,4 @@
-# Fine-Tuning DeepSeek-R1-Distill-Llama-8B with LoRA
+# Fine-Tuning DeepSeek-R1-Distill-Llama-8B with LoRA to think like a Doctor
 
 ## Overview
 
@@ -104,6 +104,10 @@ Since `max_steps=60`, we allow for additional training beyond one epoch.
 - **Memory Constraints:** Even with 4-bit quantization, fitting an 8B model required careful tuning of batch size and gradient accumulation.
 - **Stability of LoRA Rank:** Experimenting with `r=8` led to underfitting, while `r=32` consumed excessive memory.
 - **Gradient Exploding:** Initial training showed unstable gradients, requiring `gradient_accumulation_steps=4` to stabilize updates.
+
+## Training Curves
+<img width="516" alt="image" src="https://github.com/user-attachments/assets/ccac3d48-2e95-4d34-b782-0c9289865a5a" />
+
 
 
 
